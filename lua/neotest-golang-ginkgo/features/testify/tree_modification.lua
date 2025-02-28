@@ -1,8 +1,8 @@
 --- Functions to modify the Neotest tree, for testify suite support.
 
-local logger = require("neotest-golang.logging")
-local lib = require("neotest-golang.lib")
-local lookup = require("neotest-golang.features.testify.lookup")
+local logger = require("neotest-golang-ginkgo.logging")
+local lib = require("neotest-golang-ginkgo.lib")
+local lookup = require("neotest-golang-ginkgo.features.testify.lookup")
 
 local M = {}
 

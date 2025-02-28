@@ -1,6 +1,6 @@
 local nio = require("nio")
 local adapter = require("neotest-golang")
-local lib = require("neotest-golang.lib")
+local lib = require("neotest-golang-ginkgo.lib")
 local _ = require("plenary")
 
 describe("Neotest position to Go test name", function()

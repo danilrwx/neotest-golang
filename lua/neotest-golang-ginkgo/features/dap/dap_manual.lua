@@ -1,6 +1,6 @@
 --- DAP (manual dap configuration) setup related functions.
 
-local options = require("neotest-golang.options")
+local options = require("neotest-golang-ginkgo.options")
 
 local M = {}
 

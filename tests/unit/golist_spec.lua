@@ -3,7 +3,7 @@ local log = require("plenary.log").new({
   level = "debug",
 })
 
-local lib = require("neotest-golang.lib")
+local lib = require("neotest-golang-ginkgo.lib")
 
 local function convert_path_separators(path)
   if vim.fn.has("win32") == 1 then

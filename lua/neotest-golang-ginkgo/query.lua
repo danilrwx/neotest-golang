@@ -2,8 +2,8 @@
 
 local lib = require("neotest.lib")
 
-local options = require("neotest-golang.options")
-local testify = require("neotest-golang.features.testify")
+local options = require("neotest-golang-ginkgo.options")
+local testify = require("neotest-golang-ginkgo.features.testify")
 
 local M = {}
 

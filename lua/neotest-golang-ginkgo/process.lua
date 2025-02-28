@@ -3,9 +3,9 @@
 
 local async = require("neotest.async")
 
-local logger = require("neotest-golang.logging")
-local options = require("neotest-golang.options")
-local lib = require("neotest-golang.lib")
+local logger = require("neotest-golang-ginkgo.logging")
+local options = require("neotest-golang-ginkgo.options")
+local lib = require("neotest-golang-ginkgo.lib")
 
 --- @class RunspecContext
 --- @field pos_id string Neotest tree position id.

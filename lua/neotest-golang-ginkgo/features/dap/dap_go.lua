@@ -1,7 +1,7 @@
 --- DAP (dap-go) setup related functions.
 
-local options = require("neotest-golang.options")
-local logger = require("neotest-golang.logging")
+local options = require("neotest-golang-ginkgo.options")
+local logger = require("neotest-golang-ginkgo.logging")
 
 local M = {}
 

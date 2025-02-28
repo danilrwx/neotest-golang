@@ -255,11 +255,11 @@ this. See `:h vim.log.levels` for all levels.
     The neotest-golang logs can be opened using this convenient vim command:
 
     ```vim
-    :exe 'edit' stdpath('log').'/neotest-golang.log'
+    :exe 'edit' stdpath('log').'/neotest-golang-ginkgo.log'
     ```
 
     This usually corresponds to something like
-    `~/.local/state/nvim/neotest-golang.log`.
+    `~/.local/state/nvim/neotest-golang-ginkgo.log`.
 
 ### `sanitize_output`
 

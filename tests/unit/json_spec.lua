@@ -1,4 +1,4 @@
-local lib = require("neotest-golang.lib")
+local lib = require("neotest-golang-ginkgo.lib")
 local _ = require("plenary")
 
 describe("Go list", function()

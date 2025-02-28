@@ -2,9 +2,9 @@
 
 local async = require("neotest.async")
 
-local logger = require("neotest-golang.logging")
-local options = require("neotest-golang.options")
-local json = require("neotest-golang.lib.json")
+local logger = require("neotest-golang-ginkgo.logging")
+local options = require("neotest-golang-ginkgo.options")
+local json = require("neotest-golang-ginkgo.lib.json")
 
 local M = {}
 

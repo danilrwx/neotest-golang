@@ -1,8 +1,8 @@
 --- Helpers to build the command and context around running all tests of a file.
 
-local logger = require("neotest-golang.logging")
-local lib = require("neotest-golang.lib")
-local dap = require("neotest-golang.features.dap")
+local logger = require("neotest-golang-ginkgo.logging")
+local lib = require("neotest-golang-ginkgo.lib")
+local dap = require("neotest-golang-ginkgo.features.dap")
 
 local M = {}
 

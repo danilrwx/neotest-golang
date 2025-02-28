@@ -1,8 +1,8 @@
---- These are the default options for neotest-golang. You can override them by
+--- These are the default options for neotest-golang-ginkgo. You can override them by
 --- providing them as arguments to the Adapter function. See the README for mode
 --- details and examples.
 
-local logger = require("neotest-golang.logging")
+local logger = require("neotest-golang-ginkgo.logging")
 
 local M = {}
 

@@ -1,7 +1,7 @@
 --- DAP setup related functions.
 
-local options = require("neotest-golang.options")
-local logger = require("neotest-golang.logging")
+local options = require("neotest-golang-ginkgo.options")
+local logger = require("neotest-golang-ginkgo.logging")
 
 local M = {}
 
@@ -13,9 +13,9 @@ local function get_dap_implementation()
   end
 
   if selected_dap_mode == "dap-go" then
-    dap_impl = require("neotest-golang.features.dap.dap_go")
+    dap_impl = require("neotest-golang-ginkgo.features.dap.dap_go")
   elseif selected_dap_mode == "manual" then
-    dap_impl = require("neotest-golang.features.dap.dap_manual")
+    dap_impl = require("neotest-golang-ginkgo.features.dap.dap_manual")
   else
     local msg = "Got dap-mode: `"
       .. selected_dap_mode

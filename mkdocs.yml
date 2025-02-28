@@ -1,5 +1,5 @@
 site_name: neotest-golang
-site_url: https://neotest-golang.github.io
+site_url: https://neotest-golang-ginkgo.github.io
 repo_url: https://github.com/fredrikaverpil/neotest-golang
 docs_dir: docs
 edit_uri: edit/main/docs/

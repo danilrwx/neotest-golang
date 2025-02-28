@@ -3,7 +3,7 @@ local M = {}
 local logger = nil
 
 local function get_logger()
-  local options = require("neotest-golang.options")
+  local options = require("neotest-golang-ginkgo.options")
 
   if logger == nil then
     ---@type neotest.Logger

@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// This function should not be detected by neotest-golang.
+// This function should not be detected by neotest-golang-ginkgo.
 func TestMain(m *testing.M) {
 	code := m.Run()
 	os.Exit(code)

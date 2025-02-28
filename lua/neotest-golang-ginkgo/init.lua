@@ -1,11 +1,11 @@
 --- This is the main entry point for the neotest-golang adapter. It follows the
 --- Neotest interface: https://github.com/nvim-neotest/neotest/blob/master/lua/neotest/adapters/interface.lua
 
-local logger = require("neotest-golang.logging")
-local options = require("neotest-golang.options")
-local query = require("neotest-golang.query")
-local runspec = require("neotest-golang.runspec")
-local process = require("neotest-golang.process")
+local logger = require("neotest-golang-ginkgo.logging")
+local options = require("neotest-golang-ginkgo.options")
+local query = require("neotest-golang-ginkgo.query")
+local runspec = require("neotest-golang-ginkgo.runspec")
+local process = require("neotest-golang-ginkgo.process")
 
 local M = {}
 

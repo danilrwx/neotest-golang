@@ -1,8 +1,8 @@
 --- JSON processing helpers.
 
-local logger = require("neotest-golang.logging")
-local options = require("neotest-golang.options")
-local sanitize = require("neotest-golang.lib.sanitize")
+local logger = require("neotest-golang-ginkgo.logging")
+local options = require("neotest-golang-ginkgo.options")
+local sanitize = require("neotest-golang-ginkgo.lib.sanitize")
 
 local M = {}
 

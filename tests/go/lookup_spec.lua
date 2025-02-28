@@ -1,8 +1,8 @@
 local _ = require("plenary")
 
-local options = require("neotest-golang.options")
-local lib = require("neotest-golang.lib")
-local testify = require("neotest-golang.features.testify")
+local options = require("neotest-golang-ginkgo.options")
+local lib = require("neotest-golang-ginkgo.lib")
+local testify = require("neotest-golang-ginkgo.features.testify")
 
 local function normalize_windows_path(path)
   return path:gsub("\\", "/")
