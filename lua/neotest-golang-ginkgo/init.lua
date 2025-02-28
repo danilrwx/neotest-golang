@@ -6,6 +6,7 @@ local options = require("neotest-golang-ginkgo.options")
 local query = require("neotest-golang-ginkgo.query")
 local runspec = require("neotest-golang-ginkgo.runspec")
 local process = require("neotest-golang-ginkgo.process")
+local lib = require("neotest.lib")
 
 local M = {}
 
@@ -48,7 +49,30 @@ end
 --- @param file_path string
 --- @return boolean
 function M.Adapter.is_test_file(file_path)
-  return vim.endswith(file_path, "_test.go")
+  local q = [[
+    ; -- Namespaces --
+    ; Matches: `describe('subject')` and `context('case')`
+    ((call_expression
+      function: (identifier) @func_name (#any-of? @func_name "Describe" "FDescribe" "PDescribe" "XDescribe" "DescribeTable" "FDescribeTable" "PDescribeTable" "XDescribeTable" "Context" "FContext" "PContext" "XContext" "When" "FWhen" "PWhen" "XWhen")
+      arguments: (argument_list ((interpreted_string_literal) @namespace.name))
+    )) @namespace.definition
+
+    ; -- Tests --
+    ; Matches: `it('test')`
+    ((call_expression
+      function: (identifier) @func_name (#any-of? @func_name "It" "FIt" "PIt" "XIt" "Specify" "FSpecify" "PSpecify" "XSpecify" "Entry" "FEntry" "PEntry" "XEntry")
+      arguments: (argument_list ((interpreted_string_literal) @test.name))
+    )) @test.definition
+  ]]
+
+  local opts = {
+    nested_namespaces = true,
+    require_namespaces = true,
+    -- build_position = utils.create_position,
+  }
+
+  local nodes = lib.treesitter.parse_positions(file_path, q, opts)
+  return nodes == nil and vim.endswith(file_path, "_test.go")
 end
 
 --- Given a file path, parse all the tests within it.
